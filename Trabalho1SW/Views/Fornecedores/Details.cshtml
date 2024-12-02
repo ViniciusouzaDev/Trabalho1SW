@@ -1,0 +1,80 @@
+﻿@model Trabalho1SW.Models.Fornecedor
+
+@{
+    ViewData["Title"] = "Detalhes do Fornecedor";
+}
+
+<style>
+
+    @@keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    body {
+        background: linear-gradient(-45deg, #007bff, #0056b3, #33ccff, #001f4d);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+</style>
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4 mx-auto" style="max-width: 700px; border-radius: 15px; background-color: rgba(255, 255, 255, 0.9);">
+        <h2 class="text-primary text-center mb-4">Detalhes do Fornecedor</h2>
+        <dl class="row text-start">
+            <dt class="col-sm-4">Razão Social</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.RazaoSocial)</dd>
+
+            <dt class="col-sm-4">Nome Fantasia</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.NomeFantasia)</dd>
+
+            <dt class="col-sm-4">Email</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+            <dt class="col-sm-4">CNPJ</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.cnpj)</dd>
+
+            <dt class="col-sm-4">Telefone</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Telefone)</dd>
+
+            <dt class="col-sm-4">CEP</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.cep)</dd>
+
+            <dt class="col-sm-4">Pessoa de Contato</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.PessoaContato)</dd>
+
+            <dt class="col-sm-4">Rua</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.rua)</dd>
+
+            <dt class="col-sm-4">Número</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Numero)</dd>
+
+            <dt class="col-sm-4">Bairro</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.bairro)</dd>
+
+            <dt class="col-sm-4">Cidade</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.cidade)</dd>
+
+            <dt class="col-sm-4">Estado</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.estado)</dd>
+
+            <dt class="col-sm-4">País</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Pais)</dd>
+        </dl>
+
+        <div class="d-flex justify-content-center mt-4">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-lg me-2 px-4">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary btn-lg px-4">Voltar</a>
+        </div>
+    </div>
+</div>
